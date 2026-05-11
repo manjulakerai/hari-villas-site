@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Villas Carpentry</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #2c2c2c;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            color: #c9a84c;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header .divider {
+            width: 60px;
+            height: 3px;
+            background: #c9a84c;
+            margin: 20px auto;
+        }
+
+        header .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: #ccc;
+        }
+
+        /* Services */
+        .services {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-left: 4px solid #c9a84c;
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .service-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Why section */
+        .why {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .why-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            flex: 1 1 200px;
+            max-width: 220px;
+        }
+
+        .why-item .number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #c9a84c;
+        }
+
+        .why-item p {
+            color: #ccc;
+            margin-top: 6px;
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        .contact {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+
+        .contact .subtitle {
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-details a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            color: #1a1a2e;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 28px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .contact-details a:hover {
+            background: #e8e8e8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 40px;
+            background: #c9a84c;
+            color: #1a1a2e;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #b8953f;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: #888;
+            text-align: center;
+            padding: 24px 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header { padding: 40px 16px; }
+            .services, .contact { padding: 40px 16px; }
+            .why { padding: 40px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hari Villas Carpentry</h1>
+        <div class="divider"></div>
+        <p class="tagline">Quality Craftsmanship. Built to Last.</p>
+        <p class="intro">Professional carpentry services for residential and commercial projects across Sydney. From framing to finishing — we do it all.</p>
+    </header>
+
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🏗</div>
+                <h3>Framing & Structural</h3>
+                <p>Wall framing, roof framing, floor systems, and structural timber work for new builds and extensions.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🚪</div>
+                <h3>Doors & Windows</h3>
+                <p>Supply and install internal and external doors, window frames, sliding doors, and hardware.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🪵</div>
+                <h3>Decking & Pergolas</h3>
+                <p>Custom timber decks, pergolas, carports, and outdoor structures built to suit your space.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏠</div>
+                <h3>Renovations & Fit-Outs</h3>
+                <p>Kitchen installs, bathroom carpentry, built-in wardrobes, shelving, and interior fit-outs.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📐</div>
+                <h3>Formwork</h3>
+                <p>Concrete formwork for slabs, footings, retaining walls, and commercial pours.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🔧</div>
+                <h3>Repairs & Maintenance</h3>
+                <p>Timber repairs, rot replacement, fence fixes, general maintenance, and handyman carpentry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why">
+        <h2>Why Hari Villas</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="number">15+</div>
+                <p>Years of carpentry experience</p>
+            </div>
+            <div class="why-item">
+                <div class="number">100%</div>
+                <p>Licensed and fully insured</p>
+            </div>
+            <div class="why-item">
+                <div class="number">5 Star</div>
+                <p>Quality workmanship guaranteed</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Get a Free Quote</h2>
+        <p class="subtitle">Call or text — we'll get back to you within 24 hours.</p>
+        <div class="contact-details">
+            <a href="tel:+61426602364">📞 0426 602 364</a>
+            <a href="mailto:ravjikerai@live.co.uk">✉️ ravjikerai@live.co.uk</a>
+            <a href="#">📍 Sydney, NSW</a>
+        </div>
+        <a href="tel:+61426602364" class="cta-button">Call Now for a Free Quote</a>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 8px;">&copy; 2026 Hari Villas Pty Ltd. All rights reserved.</div>
+        <div>ABN: 41 681 880 295 &nbsp;|&nbsp; ACN: 681 880 295</div>
+    </footer>
+
+</body>
+</html>
